@@ -2,7 +2,7 @@
 
 Cyber Auth 2024 is a sleek, cyber-themed authentication interface, providing both login and registration forms with futuristic animations and glitch effects. This project, designed for modern websites, delivers an immersive user experience through a visually appealing interface.
 
-![Login Interface](./image.png)
+![Login Interface](https://nik-100xdevz.github.io/login-page/login-page/index.html)
 
 ## Repository
 
