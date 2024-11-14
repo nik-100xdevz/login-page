@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catch the Falling Objects Game</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Cyber Auth 2024</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="gameContainer">
-    <canvas id="gameCanvas"></canvas>
-    <div id="scoreBoard">Score: <span id="score">0</span></div>
-  </div>
-  <script src="script.js"></script>
+    <div class="container">
+        <div class="cyber-box" id="loginForm">
+            <center><h2 class="glitch">Login</h2></center>
+            <form>
+                <div class="input-group">
+                    <input type="text" required>
+                    <span class="highlight"></span>
+                    <span class="cyber-line"></span>
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <span class="highlight"></span>
+                    <span class="cyber-line"></span>
+                    <label>Password</label>
+                </div>
+                <button class="cyber-button">Sign In</button>
+            </form>
+            <p>No account? <a href="#register" class="switch-form">Register</a></p>
+        </div>
+
+        <div class="cyber-box" id="registerForm">
+            <center><h2 class="glitch">Register</h2></center>
+            <form>
+                <div class="input-group">
+                    <input type="text" required>
+                    <span class="highlight"></span>
+                    <span class="cyber-line"></span>
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <span class="highlight"></span>
+                    <span class="cyber-line"></span>
+                    <label>Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <span class="highlight"></span>
+                    <span class="cyber-line"></span>
+                    <label>Password</label>
+                </div>
+                <button class="cyber-button">Create Account</button>
+            </form>
+            <p>Have an account? <a href="#login" class="switch-form">Sign In</a></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
