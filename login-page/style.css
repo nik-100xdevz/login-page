@@ -1,36 +1,173 @@
-* {
+:root {
+    --neon-primary: #00b3b3;
+    --neon-secondary: #80ffdb;
+    --dark-bg: #0a0a0a;
+    --darker-bg: #050505;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent: #ff3366;
+    --shadow-color: rgba(0, 179, 179, 0.2);
+}
+
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
+    background: var(--dark-bg);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(0,179,179,0.03) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(128,255,219,0.03) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #282c34;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  
-  #gameContainer {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cyber-box {
+    background: rgba(15, 15, 15, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    display: none;
+    backdrop-filter: blur(10px);
     position: relative;
-    width: 400px;
-    height: 600px;
-    background-color: #333;
-  }
-  
-  #gameCanvas {
-    width: 100%;
-    height: 100%;
-    background-color: #111;
-  }
-  
-  #scoreBoard {
+    width: 320px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.cyber-box::before {
+    content: '';
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 1.2em;
-  }
-  
+    inset: 0;
+    border-radius: 15px;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--neon-primary), var(--neon-secondary));
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.cyber-box.active {
+    display: block;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.glitch {
+    font-size: 1.8em;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: var(--neon-primary);
+    box-shadow: 0 0 15px rgba(0, 179, 179, 0.1);
+}
+
+.cyber-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--neon-primary), var(--neon-secondary));
+    border: none;
+    border-radius: 8px;
+    color: var(--darker-bg);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cyber-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 179, 179, 0.2);
+}
+
+.switch-form {
+    color: var(--neon-primary);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.switch-form:hover {
+    color: var(--neon-secondary);
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-size: 14px;
+    transition: 0.3s ease all;
+    pointer-events: none;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: var(--neon-primary);
+}
+
+p {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
