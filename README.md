@@ -6,7 +6,7 @@ Cyber Auth 2024 is a sleek, cyber-themed authentication interface, providing bot
 
 ## Repository
 
-This code is hosted on GitHub: [nik-100xdevz/login-page]([https://github.com/nik-100xdevz/login-page](https://nik-100xdevz.github.io/login-page/login-page/index.html))
+This code is hosted on GitHub: [nik-100xdevz/login-page]([https://github.com/nik-100xdevz/login-page](https://nik-100xdevz.github.io/login-page/login-page/index.html)
 
 ## Table of Contents
 
