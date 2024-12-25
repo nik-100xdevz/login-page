@@ -28,7 +28,7 @@ The **Cyber Auth 2024** project offers a cyberpunk-inspired login and registrati
 - **Login and Registration Forms**: Seamlessly switch between login and registration modes.
 - **Glitch Effect**: A custom glitch effect on the headers to enhance the cyber theme.
 - **Interactive Input Animations**: Highlight animations for a polished user experience.
-- **Customizable**: Easily modify colors, fonts, and animations.
+- **Customizable**: Easily modify colors, fonts, and   animations.
 
 ## Installation
 
