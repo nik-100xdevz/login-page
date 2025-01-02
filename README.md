@@ -40,5 +40,4 @@ The **Cyber Auth 2024** project offers a cyberpunk-inspired login and registrati
 cd login-page
 
 
-This README is designed to give an informative overview and guide on using, customizing, and contributing to your project. It also provides clear installation instructions and links back to your GitHub repository. You may need to replace `image.png` with the actual path if the screenshot or image is stored differently in the repository.
 
